@@ -1,0 +1,298 @@
+<DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Random Password</title>
+        <style>
+            body {
+                background: url(shah.jpg);
+                animation-name: moin;
+                animation-duration: 10s;
+                animation-delay: .5s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+            }
+
+            @media screen and (max-width:450px) {
+                body {
+                    height: 50rem;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            #body {
+                margin-top: -1rem;
+            }
+
+            #full {
+                background-color: gray;
+                height: 352px;
+                width: 250px;
+                margin-top: 5rem;
+                margin-left: 33.5rem;
+                border-radius: 20px;
+                box-shadow: 10px 5px 15px 3px rgba(52, 52, 52, 0.457);
+            }
+
+            @media screen and (max-width:450px) {
+                #full {
+                    margin-left: 50px;
+                    margin-top: 7rem
+                }
+            }
+
+            @keyframes moin {
+                0% {
+                    /* box-shadow: -.1px -0px 55px 20px rgb(162, 10, 232); */
+                    background: linear-gradient(0.3turn, #1e7a91, #29e454, #f69d3c, violet);
+
+                }
+
+                10% {
+                    /* box-shadow: -.1px -0px 55px 20px rgb(232, 10, 195); */
+                    background: linear-gradient(0.3turn, #d5ddd0, #f69d3c, violet, #1e7a91);
+                }
+
+                20% {
+                    /* box-shadow: -.1px -0px 55px 20px rgb(232, 165, 10); */
+                    background: linear-gradient(0.2turn, #f69d3c, violet, #1e7a91, #29e454, );
+                }
+
+                40% {
+                    /* box-shadow: -.1px -0px 55px 20px rgb(255, 255, 0); */
+                    background: linear-gradient(0.1turn, violet #1e7a91, #29e454, #f69d3c);
+                }
+
+                50% {
+                    /* box-shadow: -.1px -0px 55px 20px rgb(232, 103, 10); */
+                    background: linear-gradient(0.8turn, #1e7a91, #29e454, #f69d3c, violet);
+                }
+
+                60% {
+                    /* box-shadow: -.1px -0px 55px 20px rgb(25, 10, 232); */
+                    background: linear-gradient(0.4turn #29e454, #1e7a91, violet, #f69d3c);
+                }
+
+                80% {
+                    /* box-shadow: -.1px -0px 55px 20px rgb(13, 255, 0); */
+                    background: linear-gradient(0.4turn, #1e7a91, violet, #29e454, #f69d3c);
+                }
+
+                100% {
+                    /* box-shadow: -.1px -0px 55px 20px rgb(10, 154, 232); */
+                    background: linear-gradient(0.3turn, violet, #1e7a91, #f69d3c, #4df866);
+                }
+            }
+
+            /* #total-char {
+                margin-top: 100px;
+                margin-left: 10px;
+            } */
+
+            #total-char {
+                font-size: 30;
+                width: 215px;
+                height: 32px;
+                position: relative;
+                top: 133px;
+                left: 540px;
+                color: white;
+            }
+
+            @media screen and (max-width:450px) {
+                #total-char {
+                    position: absolute;
+                    top: 6.5rem;
+                    left: 1.8rem;
+                }
+            }
+
+            #length {
+                display: flex;
+                margin-left: 15px;
+            }
+
+            #length input {
+                margin-top: 21px;
+                margin-left: 40px;
+                height: 15px;
+                width: 40px;
+            }
+
+            #upper {
+                display: flex;
+                margin-left: 15px;
+            }
+
+            #upper input {
+                margin-top: 5px;
+                margin-left: 27px;
+            }
+
+            #lower {
+                display: flex;
+                margin-left: 15px;
+            }
+
+            #lower input {
+                margin-top: 7px;
+                margin-left: 30px;
+            }
+
+            #number {
+                display: flex;
+                margin-left: 15px;
+            }
+
+            #number input {
+                margin-top: 8px;
+                margin-left: 44px;
+            }
+
+            #symbol {
+                display: flex;
+                margin-left: 15px;
+            }
+
+            #symbol input {
+                margin-top: 8px;
+                margin-left: 50px;
+            }
+
+            #gen {
+                margin-left: -30px;
+            }
+
+            #btn {
+                color: chartreuse;
+                background-color: #1e7a91;
+                height: 3rem;
+                width: 18rem;
+                margin-top: 3rem;
+                margin-left: 10px;
+                border-radius: 30px;
+                font-family: cursive;
+                font-size: larger;
+            }
+
+            #heading {
+                margin-top: 30px;
+                margin-left: 25rem;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color: darkblue;
+            }
+
+            @media screen and (max-width:450px) {
+                #heading {
+                    margin-top: 50px;
+                    margin-left: 2rem;
+                    width: 20rem;
+                }
+            }
+
+            #name {
+                opacity: 0;
+            }
+
+            @media screen and (max-width:450px) {
+                #name {
+                    opacity: 2;
+                    position: absolute;
+                    top: 80px;
+                    left: 390px;
+                    background: no-repeat;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="body">
+            <h3 id="total-char"></h3>
+            <!-- <input id="total-char" type="text"> -->
+            <h1 id="heading">STRONG-PASSWORD GENERATOR</h1>
+            <div id="full">
+                <div id="length">
+                    <h3>Password length</h3><input type="search" id="checkbox1">
+                </div>
+                <div id="upper">
+                    <h3>Contain uppercase</h3><input type="checkbox" name="" id="checkbox2">
+                </div>
+                <div id="lower">
+                    <h3>Contain lowercase</h3><input type="checkbox" name="" id="checkbox3">
+                </div>
+                <div id="number">
+                    <h3>Contain number</h3><input type="checkbox" name="" id="checkbox4">
+                </div>
+                <div id="symbol">
+                    <h3>Contain symbol</h3><input type="checkbox" name="" id="checkbox5">
+                </div>
+                <div id="gen">
+                    <button id="btn" type="button">Generate</button>
+                </div>
+            </div>
+        </div>
+        <script>
+            const upperset = "ABCDEFGHIJKLMNOPQRSTUVWSYZ"
+            const lowerset = "abcdefghijklmnopqrstuvwxyz"
+            const numberset = "1234567890"
+            const symbolset = "!@#$%^&*()_~`="
+
+            const passbox = document.getElementById('total-char')
+            const totalchar = document.getElementById('checkbox1')
+            const upperinput = document.getElementById('checkbox2')
+            const lowerinput = document.getElementById('checkbox3')
+            const numberinput = document.getElementById('checkbox4')
+            const symbolinput = document.getElementById('checkbox5')
+
+
+            const getRandomData = (dataset) => {
+                return dataset[Math.floor(Math.random() * dataset.length)]
+            }
+
+            const generatePassword = (password = "") => {
+                if (upperinput.checked) {
+                    password += getRandomData(upperset)
+                }
+                if (lowerinput.checked) {
+                    password += getRandomData(lowerset)
+                }
+                if (numberinput.checked) {
+                    password += getRandomData(numberset)
+                }
+                if (symbolinput.checked) {
+                    password += getRandomData(symbolset)
+                }
+                if (password.length < totalchar.value) {
+                    return generatePassword(password)
+                }
+
+                passbox.innerText = truncateString(password, totalchar.value)
+            }
+
+            generatePassword();
+
+            document.getElementById('btn').addEventListener(
+                "click",
+                function () {
+                    generatePassword();
+                }
+            )
+
+            function truncateString(str, num) {
+                if (str.length > num) {
+                    let subStr = str.substring(0, num)
+                    return subStr;
+                }
+                else {
+                    return str;
+                }
+            }
+
+        </script>
+    </body>
+
+    </html>
